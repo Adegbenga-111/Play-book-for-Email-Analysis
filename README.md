@@ -11,93 +11,19 @@ Develop a phishing analysis playbook to standardize procedures for detecting, an
 ## Steps
 ## Step 1 Opening of Zip files :
 Opening the zip file containing the email ,but in this case we have two zip files 
-![Alt The Files Used In this Analysis](https://github.com/Adegbenga-111/Building-An-Organization-VPN-Network-/blob/main/to%20be%20used%20as%20the%20network%20diagram.png)
+![Alt The Files Used In this Analysis](https://github.com/Adegbenga-111/Play-book-for-Email-Analysis/blob/main/Email%20Analysis%20-%20LetsDefend%20-%20Google%20Chrome%205_2_2024%201_08_17%20PM.png)
+*image 1:The Files Used In this Analysis *
 
-![Alt Network Diagram ](https://github.com/Adegbenga-111/Building-An-Organization-VPN-Network-/blob/main/to%20be%20used%20as%20the%20network%20diagram.png)
-*image 1: Network Diagram*
-## Step 2 Router Configuration :
-According to image 1 , there are three routers which are 192.168.1.1, ISP, 10.0.1.1. In order to create this network each of the router as to be configured using the cisco CLI(command line interface).
-Router 192.168.1.1 Configuration:
- - Router>enable
- - Router#config t
+Opening the zip files with the password:**infected**
 
-**This lines of command is to move from User Exec mode to Global Configuration mode(All configuration are done in this mode) .**
+![Alt Openind The Files Used In this Analysis](https://github.com/Adegbenga-111/Play-book-for-Email-Analysis/blob/main/Email%20Analysis%20-%20LetsDefend%20-%20Google%20Chrome%205_2_2024%201_12_11%20PM.png)
+*image 2:Openind The Files Used In this Analysis *
 
--  Router(config)#int fa0/0
--  Router(config-if)#ip add 192.168.1.1 255.255.255.0 
--  Router(config-if)#no shut
+## Step 2 Opening Mail with the necessary Application:
+Opening the mail with the email application in this case it's thunderbird , to read the content of the mail frist since basic infromation about the sender can be found easly.
 
- **This lines of command is to configure fast/ethernet0/0 for 192.168.1.1, as shown in the image below.**
- ![Alt fast/ethernet0/0 for 192.168.1.1 ](https://github.com/Adegbenga-111/Building-An-Organization-VPN-Network-/blob/main/projecy/192.168.1.%204_27_2024%203_52_59%20PM.png)
-*image 2: fast/ethernet0/0 for 192.168.1.1 *
--   Router(config-if)#exit
--   Router(config)#int fa0/1
--   Router(config-if)#ip address 13.2.5.3 255.0.0.0
--   Router(config-if)#no shut
-
-  **This lines of command is to configure fast/ethernet0/1 for 192.168.1.1 , as shown in the image below.**
-   ![Alt fast/ethernet0/1 for 192.168.1.1 ](https://github.com/Adegbenga-111/Building-An-Organization-VPN-Network-/blob/main/projecy/192.168.1.%204_27_2024%203_52_53%20PM.png)
-*image 3: fast/ethernet0/1 for 192.168.1.1 *
-Router ISP Configuration:
--Router>enable
--Router#config t
-
-**This lines of command is to move from User Exec mode to Global Configuration mode(All configuration are done in this mode) .**
-
-- Router(config)#int fa0/0
-- Router (config-if)#ip add 12.2.5.3 255.0.0.0
-- Router(config-if)#no shut
-- Router(config-if)#exit
-
- **This lines of command is to configure fast/ethernet0/0 for ISP , as shown in the image below.**
-![Alt configure fast/ethernet0/0 for ISP](https://github.com/Adegbenga-111/Building-An-Organization-VPN-Network-/blob/main/projecy/ISP%20(13.2.5.7)%20(12.2.5.3)%204_27_2024%203_53_22%20PM.png)
-*image 4: fast/ethernet0/0 for ISP*
-- Router(config)#int fa0/1
-- Router(config-if)#ip add 13.2.5.7 255.0.0.0
-- Router(config-if)#no shut
-
- **This lines of command is to configure fast/ethernet0/1 for ISP , as shown in the image below.**
- ![Alt  configure fast/ethernet0/1 for ISP ](https://github.com/Adegbenga-111/Building-An-Organization-VPN-Network-/blob/main/projecy/ISP%20(13.2.5.7)%20(12.2.5.3)%204_27_2024%203_53_29%20PM.png)
-*image 5: fast/ethernet0/1 for ISP*
-
-Router 10.0.1.1 Configuration:
-- Router>enable
-- Router#config t
-
-**This lines of command is to move from User Exec mode to Global Configuration mode(All configuration are done in this mode) .**
-
-- Router(config)#int fa0/0
-- Router(config-if)#ip add 12.2.5.4 255.0.0.0
-- Router config-if)#no shut
-
-**This lines of command is to configure fast/ethernet0/0 for 10.0.1.1 , as shown in the image below.**
-![Alt configure fast/ethernet0/0 for ISP](https://github.com/Adegbenga-111/Building-An-Organization-VPN-Network-/blob/main/projecy/10.0.1.1%204_27_2024%203_53_58%20PM.png)
-*image 6: fast/ethernet0/0 for 10.0.1.1*
-
-- Router(config-if)#exit
-- Router(config)#int fa0/1
-- Router(config-if)#ip add 10.0.1.1 255.255.255.0
-- Router(config-if)#no shut
-
-  
-**This lines of command is to configure fast/ethernet0/1 for 10.0.1.1 , as shown in the image below.**
-![Alt configure fast/ethernet0/0 for ISP](https://github.com/Adegbenga-111/Building-An-Organization-VPN-Network-/blob/main/projecy/10.0.1.1%204_27_2024%203_54_09%20PM.png)
-*image 7: fast/ethernet0/0 for 10.0.1.1*
-
-**DEFAULT ROUTING CONFIGURATION ON ROUTER 192.168.1.1:.**
-- Router>enable
-- Router#config t
-- Enter configuration commands, one per line. End with CNTL/Z.
-- Router(config)#ip route 0.0.0.0 0.0.0.0 13.2.5.7
-- Router(config)#
-
-**DEFAULT ROUTING CONFIGURATION ON ROUTER 10.0.1.1:.**
-- Router>enable
-- Router#config t
-- Enter configuration commands, one per line. End with CNTL/Z.
-- Router(config)#ip route 0.0.0.0 0.0.0.0 12.2.5.3
-- Router(config)#
-
+![Alt The Mail Opened With Thunderbird](https://github.com/Adegbenga-111/Play-book-for-Email-Analysis/blob/main/Email%20Analysis%20-%20LetsDefend%20-%20Google%20Chrome%205_2_2024%201_31_21%20PM.png)
+*  The Mail Opened With Thunderbird *
 ## Step 3 VPN Configuration :
 NOW CREATE VPN TUNNEL between  192.168.1.1 and 10.0.1.1:
 
