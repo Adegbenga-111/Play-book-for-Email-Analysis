@@ -30,7 +30,7 @@ Opening the mail with the email application in this case it's thunderbird , to r
   ![Alt The Mail Opened With Note++](https://github.com/Adegbenga-111/Play-book-for-Email-Analysis/blob/main/Email%20Analysis%20-%20LetsDefend%20-%20Google%20Chrome%205_2_2024%201_16_23%20PM.png)
 *image 4: The Mail Opened With Note++*
 
- ## Step 3 VPN Configuration :
+ ## Step 3 Finding Basic Information About The Sender :
 NOW CREATE VPN TUNNEL between  192.168.1.1 and 10.0.1.1:
 
  Fisrt Create A VPN Tunnel On ROUTER 192.168.1.1:
