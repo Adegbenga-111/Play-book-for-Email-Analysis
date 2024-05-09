@@ -23,8 +23,14 @@ Opening the zip files with the password:**infected**
 Opening the mail with the email application in this case it's thunderbird , to read the content of the mail frist since basic infromation about the sender can be found easly.
 
 ![Alt The Mail Opened With Thunderbird](https://github.com/Adegbenga-111/Play-book-for-Email-Analysis/blob/main/Email%20Analysis%20-%20LetsDefend%20-%20Google%20Chrome%205_2_2024%201_31_21%20PM.png)
-*  The Mail Opened With Thunderbird *
-## Step 3 VPN Configuration :
+*image 3: The Mail Opened With Thunderbird *
+
+  The next application used is the note++ , this is a code editor which will give us the **HTMl** structure of the mail , this helps me to have a look at a molecular level.
+
+  ![Alt The Mail Opened With Note++](https://github.com/Adegbenga-111/Play-book-for-Email-Analysis/blob/main/Email%20Analysis%20-%20LetsDefend%20-%20Google%20Chrome%205_2_2024%201_16_23%20PM.png)
+*image 4: The Mail Opened With Note++*
+
+ ## Step 3 VPN Configuration :
 NOW CREATE VPN TUNNEL between  192.168.1.1 and 10.0.1.1:
 
  Fisrt Create A VPN Tunnel On ROUTER 192.168.1.1:
