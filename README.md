@@ -31,34 +31,17 @@ Opening the mail with the email application in this case it's thunderbird , to r
 *image 4: The Mail Opened With Note++*
 
  ## Step 3 Finding Basic Information About The Sender :
-NOW CREATE VPN TUNNEL between  192.168.1.1 and 10.0.1.1:
-
- Fisrt Create A VPN Tunnel On ROUTER 192.168.1.1:
-- Router#config t
-- Router(config)#interface tunnel 10
-- Router(config-if)#ip address 172.16.1.1 255.255.0.0
-- Router(config-if)#tunnel source fa0/1
-- Router(config-if)#tunnel destination 12.2.5.4
-- Routerconfig-if)#no shut
-
-NOW CREATE A VPN TUNNEL ON ROUTER 10.0.1.1:
-- Router#config t
-- Router(config)#interface tunnel 100
-- Router(config-if)#ip address 172.16.1.2 255.255.0.0
-- Router(config-if)#tunnel source fa0/0
-- Router(config-if)#tunnel destination 13.2.5.3
-- Router(config-if)#no shut
-
-Now Do routing for created VPN Tunnel on Both Router 192.168.1.1 and 10.0.1.1:
-
- For Router 192.168.1.1:
-  - Router(config)#ip route 192.168.2.0 255.255.255.0 172.16.1.2
+ The basic information about the sender can be found on the top of the mail when it opened with note++,as shown in the image below :
  
-  For Router 10.0.1.1:
-  - Router(config)#ip route 192.168.1.0 255.255.255.0 172.16.1.1
- 
-## Step 3 END POINT DEVICES Configuration :
-For the configuration of end point devices , just double click on the devcie and a plane will show up and move to config, then configuration was done as shown in the images shown below
+ ![Alt The Mail Opened With Note++ with information about the sender highlighted](https://github.com/Adegbenga-111/Play-book-for-Email-Analysis/blob/main/meme.png)
+*image 4: The Mail Opened With Note++ with information about the sender highlighted*
+
+Information about the sender such as the mail application used , ip address of the mail apllication which can used to traced the location of sender to as particular degree , as showm in the image below :
+ ![The location of the sender](https://github.com/Adegbenga-111/Play-book-for-Email-Analysis/blob/main/Email%20Analysis%20-%20LetsDefend%20-%20Google%20Chrome%205_2_2024%201_43_04%20PM.png)
+*image 5: The location of the sender *
+
+## Step 3 Looking in the mail attachment :
+It is important to analyze the mail attachment for malic
 ![Alt Configuration for pc on 192.168.1.10  ](https://github.com/Adegbenga-111/Building-An-Organization-VPN-Network-/blob/main/projecy/192.168.1.10%204_27_2024%203_51_06%20PM.png)
 *image 8:Configuration for pc on 192.168.1.10 *
 
