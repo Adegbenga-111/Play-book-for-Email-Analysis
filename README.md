@@ -41,7 +41,12 @@ Information about the sender such as the mail application used , ip address of t
 *image 5: The location of the sender *
 
 ## Step 3 Looking in the mail attachment :
-It is important to analyze the mail attachment for malic
+It is important to analyze the mail attachment for malware or malicious activities in order to determine if file as malicious content, this can also be done to downloaded files . 
+In this case the SHA(Secure Hashing Algorithm) 256 of the attactment in the mail is:**9909753bfb0ac8ab165bab3555233d03b01a9274a92e57c022f87ccbe51ca415**
+
+In order to determine if the file is malicious, use the hash value to run a quick search on website like **VirusTotal**. The result is shown below
+
+
 
 
 
